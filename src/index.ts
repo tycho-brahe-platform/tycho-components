@@ -53,6 +53,8 @@ export { default as VirtualKeyboard } from './VirtualKeyboard';
 export { KeyboardCustomLayouts } from './VirtualKeyboard/KeyboardCustomLayout';
 export type { KeyboardLayout } from './VirtualKeyboard/KeyboardCustomLayout';
 export { default as AppCopyText } from './AppCopyText';
+export { default as AppDropzone } from './AppDropzone/AppDropzone';
+export type { UploadedFile } from './AppDropzone/UploadedFile';
 export { default as CytoscapeMenuCanvas } from './CytoscapeMenu/CytoscapeMenuCanvas';
 export { registerCytoscapeContextMenus, contextMenus } from './CytoscapeMenu';
 export type {
