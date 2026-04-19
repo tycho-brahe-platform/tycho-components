@@ -1,0 +1,23 @@
+.language-container {
+  > .ds-dropdown-container {
+    .ds-dropdown-button {
+      .label {
+        margin: 0px var(--spacing-100);
+      }
+    }
+
+    > .ds-dropdown-list {
+      right: 0;
+      width: auto;
+
+      > .ds-dropdown-itemlist {
+        display: flex;
+        align-items: center;
+
+        .icon-check {
+          margin-left: var(--spacing-100);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,54 @@
+.ds-copy-text {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  cursor: pointer;
+
+  &__title {
+    @include helper-small-1;
+    color: var(--text-secondary);
+  }
+
+  &__separator {
+    color: var(--text-secondary);
+  }
+
+  &__content {
+    color: var(--text-primary);
+    @include body-small-1;
+  }
+
+  &__icon {
+    color: var(--icon-accent);
+    transition: all 0.2s ease;
+  }
+
+  &:hover {
+    .ds-copy-text__icon {
+      color: var(--text-primary);
+      background-color: var(--button-secondary-default);
+    }
+  }
+
+  .group-content {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &.title-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-50, 4px);
+  }
+
+  &.title-right {
+    flex-direction: row;
+  }
+
+  &.no-title {
+    .ds-copy-text__separator {
+      display: none;
+    }
+  }
+}

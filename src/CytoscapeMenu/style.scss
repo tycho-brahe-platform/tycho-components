@@ -1,0 +1,47 @@
+.cy-context-menus-cxt-menu {
+  position: absolute;
+  z-index: 1000;
+  display: none;
+  min-width: 120px;
+  padding: 4px 0;
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  font-family: inherit;
+  font-size: 14px;
+}
+
+.cy-context-menus-cxt-menuitem {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 8px 24px 8px 12px;
+  border: none;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+  white-space: nowrap;
+  font-size: 18px !important;
+
+  &:hover:not(:disabled) {
+    background: #f0f0f0;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+}
+
+.cy-context-menus-divider {
+  border-bottom: 1px solid #eee;
+}
+
+.cy-context-menus-submenu-indicator {
+  pointer-events: none;
+  font-size: 20px !important;
+  margin-left: 16px;
+  width: 16px;
+  height: 16px;
+}

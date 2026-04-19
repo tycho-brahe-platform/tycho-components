@@ -1,0 +1,33 @@
+.ds-app-card {
+  border: 1px solid var(--border-subtle-1);
+  border-radius: var(--radius-100);
+
+  > .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background-color: var(--layer-layer-2);
+    border-bottom: 1px solid var(--border-subtle-1);
+    gap: 12px;
+
+    > .title {
+      @include label-large-2;
+      flex: 1;
+    }
+
+    > .extra-header-actions {
+      display: flex;
+    }
+  }
+
+  > .body {
+    padding: 16px;
+  }
+
+  > .footer {
+    display: flex;
+    padding: 8px 16px;
+    border-top: 1px solid var(--border-subtle-1);
+  }
+}

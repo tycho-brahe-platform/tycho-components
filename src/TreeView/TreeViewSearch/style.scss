@@ -1,0 +1,49 @@
+.tree-search-modal {
+  .body {
+    min-width: 500px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+    .search-field {
+      margin-bottom: 0;
+
+      label {
+        display: block;
+        margin-bottom: 8px;
+        font-weight: 600;
+        color: var(--text-secondary);
+      }
+
+      .input-with-button {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 8px;
+
+        input {
+          flex: 1;
+          padding: 8px 12px;
+          border: var(--border-default);
+          border-radius: var(--radius-100);
+          font-size: 14px;
+
+          &:focus {
+            outline: none;
+            border-color: var(--text-accent);
+          }
+        }
+      }
+
+      .badges {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 8px;
+
+        .ds-icon {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

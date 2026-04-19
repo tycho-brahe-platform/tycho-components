@@ -1,0 +1,33 @@
+.keyboard-container {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  bottom: 16px;
+  right: 16px;
+  background-color: var(--accent-100);
+  border: 1px solid var(--border-subtle-1);
+  border-radius: var(--radius-200);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  padding: 12px;
+  gap: 8px;
+  z-index: 1000;
+  min-width: 20vw;
+
+  > .footer {
+    display: flex;
+    justify-content: end;
+    gap: 8px;
+    padding-top: var(--spacing-050);
+
+    .select-layout {
+      > .MuiSelect-select {
+        padding: 0px 16px !important;
+      }
+    }
+
+    .dropdown-menu {
+      max-height: 30vh;
+      overflow-y: auto;
+    }
+  }
+}

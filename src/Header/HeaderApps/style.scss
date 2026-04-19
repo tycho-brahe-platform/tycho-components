@@ -1,0 +1,149 @@
+.offcanvas-apps {
+  border: 1px solid var(--border-subtle-1);
+  background-color: var(--background-default);
+  width: 26vw;
+
+  > .MuiPaper-root {
+    width: 26vw;
+
+    > .header {
+      display: flex;
+      align-items: center;
+      border-bottom: 1px solid var(--border-subtle-1);
+      padding: 16px;
+
+      > .label {
+        @include label-large-1;
+        color: var(--text-primary);
+      }
+
+      > .ds-icon-button {
+        margin-left: auto;
+      }
+    }
+
+    > .body,
+    .footer {
+      padding: var(--spacing-250) 0;
+
+      > .title {
+        @include tag-medium-1;
+        color: var(--text-tertiary);
+        padding: 0px var(--spacing-250) var(--spacing-150);
+      }
+
+      > .item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 16px 20px;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--layer-hover-1);
+        }
+
+        > .icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: var(--layer-field-hover);
+          border-radius: var(--radius-100);
+          padding: 8px;
+
+          > .ds-icon {
+            color: var(--icon-on-color-accent);
+          }
+        }
+
+        > img {
+          width: 40px;
+          height: 40px;
+        }
+
+        > .texts {
+          display: flex;
+          flex-direction: column;
+          gap: 4px;
+
+          > .label {
+            @include label-medium-2;
+            color: var(--text-primary);
+          }
+
+          > .sublabel {
+            @include helper-medium-1;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: inline-block;
+            max-width: 12vw;
+            line-height: 1.2;
+          }
+        }
+
+        > .options {
+          display: flex;
+          display: flex;
+          align-items: center;
+          margin-left: auto;
+          gap: 4px;
+
+          > .ds-tag {
+            margin-right: 4px;
+          }
+        }
+      }
+    }
+
+    > .footer {
+      border-top: 1px solid var(--border-subtle-1);
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .offcanvas-apps {
+    width: 30vw;
+  }
+}
+
+@media (max-width: 960px) {
+  .offcanvas-apps {
+    width: 35vw;
+  }
+}
+
+@media (max-width: 1400px) {
+  .offcanvas-apps,
+  .offcanvas-apps > .MuiPaper-root {
+    width: 40vw;
+
+    .sublabel {
+      max-width: 20vw !important;
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  .offcanvas-apps,
+  .offcanvas-apps > .MuiPaper-root {
+    width: 50vw;
+
+    .sublabel {
+      max-width: 25vw !important;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .offcanvas-apps,
+  .offcanvas-apps > .MuiPaper-root {
+    width: 100%;
+
+    .sublabel {
+      max-width: 65vw !important;
+    }
+  }
+}

@@ -1,0 +1,55 @@
+.help-modal {
+  max-width: 60vw !important;
+  width: 60vw !important;
+
+  .body {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 16px;
+    padding: var(--spacing-300) var(--spacing-200);
+    max-height: 60vh;
+    width: 60vw;
+    overflow-y: auto;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      flex: 0 0 calc(33.333% - 11px);
+      min-height: 24vh;
+      padding: 24px 24px 16px;
+      border: 1px solid var(--border-subtle-2);
+      border-radius: var(--radius-100);
+
+      > .title {
+        @include subtitle-small-2;
+        color: var(--text-primary);
+        margin-bottom: 4px;
+      }
+
+      > .desc {
+        @include body-medium-1;
+        color: var(--text-secondary);
+        margin-bottom: 8px;
+      }
+
+      > .ds-button {
+        margin-top: auto;
+      }
+
+      .help-checkbox-label {
+        display: flex;
+        align-items: center;
+        gap: var(--spacing-100);
+        cursor: pointer;
+        user-select: none;
+        font-size: 0.875rem;
+        margin-bottom: 16px;
+
+        .help-checkbox {
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

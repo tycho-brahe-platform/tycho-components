@@ -1,0 +1,6 @@
+.docs-story {
+  > div:first-child {
+    height: 200px;
+    overflow: auto;
+  }
+}

@@ -1,0 +1,68 @@
+.tree-view-container {
+  position: relative;
+  width: 100%;
+
+  .canvas-tree {
+    height: 80vh;
+    padding: 16px;
+    background-color: var(--background-default);
+    border: var(--border-default);
+    border-radius: var(--radius-100);
+  }
+
+  .floating-buttons {
+    display: flex;
+    position: absolute;
+    top: 16px;
+    right: 16px;
+    z-index: 1100;
+    gap: 8px;
+  }
+
+  .info {
+    position: absolute;
+    bottom: 16px;
+    left: 16px;
+    z-index: 1100;
+    display: flex;
+    flex-direction: column;
+
+    .translation b {
+      margin-right: 4px;
+    }
+
+    .date {
+      @include helper-medium-1;
+    }
+  }
+
+  .token-data {
+    text-align: center;
+    background-color: transparent;
+
+    &.highlight {
+      background-color: yellow;
+      padding: 8px;
+    }
+
+    .token-value {
+      display: block;
+      font-weight: bolder;
+      font-size: 18px;
+    }
+
+    .token-attributes {
+      display: block;
+      color: red;
+    }
+  }
+}
+
+.tree-placeholder-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  background-color: var(--background-default, #fff);
+}

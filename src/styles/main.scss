@@ -1,0 +1,29 @@
+:root {
+  --font-family:
+    'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+    'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'Noto Color Emoji';
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+  height: 100%;
+  font-family: var(--font-family);
+}
+
+body {
+  margin: 0;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+.icon-button {
+  border: none;
+  background-color: transparent;
+  padding: 4px 8px;
+  cursor: pointer;
+}

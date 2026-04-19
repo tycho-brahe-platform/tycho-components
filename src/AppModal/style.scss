@@ -1,0 +1,75 @@
+.modal-container {
+  display: flex;
+  flex-direction: column;
+
+  > .header {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-subtle-1);
+    padding: var(--spacing-300) var(--spacing-200) var(--spacing-150);
+
+    .titles {
+      .title {
+        @include label-large-2;
+        display: block;
+      }
+
+      .subtitle {
+        display: block;
+        @include body-medium-1;
+        color: var(--text-secondary);
+      }
+    }
+
+    > .ds-icon {
+      margin-left: auto;
+      margin-bottom: auto;
+    }
+  }
+
+  > .body {
+    padding: var(--spacing-300) var(--spacing-200) var(--spacing-150);
+  }
+
+  > .footer {
+    display: flex;
+    justify-content: end;
+    margin-top: auto;
+    gap: 10px;
+    padding: var(--spacing-200) var(--spacing-200) var(--spacing-150);
+  }
+
+  &.modal-remove,
+  &.modal-confirm {
+    > .body {
+      display: flex;
+      gap: 16px;
+
+      > .ds-icon {
+        color: var(--icon-warning);
+      }
+
+      .texts {
+        display: flex;
+        flex-direction: column;
+
+        > .title {
+          @include subtitle-medium-2;
+          color: var(--text-primary);
+        }
+
+        > .subtitle {
+          @include body-medium-1;
+          color: var(--text-secondary);
+        }
+      }
+    }
+  }
+}
+
+/* Phone | XS */
+@media (max-width: 599px) {
+  .modal-container {
+    width: 90% !important;
+  }
+}

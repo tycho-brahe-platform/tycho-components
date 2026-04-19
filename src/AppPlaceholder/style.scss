@@ -1,0 +1,25 @@
+.ds-placeholder {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  &.with-margin-top {
+    margin-top: 5%;
+  }
+
+  > .ds-icon {
+    color: var(--icon-on-disabled);
+    margin-bottom: 8px;
+  }
+
+  > .title {
+    @include label-large-2;
+    color: var(--text-primary);
+    margin-bottom: 4px;
+  }
+
+  > .desc {
+    @include label-medium-1;
+    color: var(--text-secondary);
+  }
+}

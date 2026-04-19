@@ -1,0 +1,19 @@
+[18:43:17.543] [INFO] storybook v10.1.11
+[18:43:18.463] [DEBUG] Getting package.json info for D:/gitlab/tycho-brahe/tycho-components/package.json...
+[18:43:19.000] [INFO] Starting...
+[18:43:19.286] [DEBUG] Starting preview..
+[18:43:19.459] [DEBUG] Using tsconfig paths for react-docgen
+[18:43:19.500] [ERROR] Failed to build the preview
+[18:43:19.502] [ERROR] [38;2;241;97;97mReferenceError: __dirname is not defined[39m
+    at Object.viteFinal (file:///D:/gitlab/tycho-brahe/tycho-components/.storybook/main.ts:22:28)
+    at file:///D:/gitlab/tycho-brahe/tycho-components/node_modules/storybook/dist/_node-chunks/chunk-Q4DOC7HF.js:10134:36
+    at async createViteServer (file:///D:/gitlab/tycho-brahe/tycho-components/node_modules/@storybook/builder-vite/dist/index.js:6410:21)
+    at async Module.start (file:///D:/gitlab/tycho-brahe/tycho-components/node_modules/@storybook/builder-vite/dist/index.js:6435:17)
+    at async storybookDevServer (file:///D:/gitlab/tycho-brahe/tycho-components/node_modules/storybook/dist/core-server/index.js:6806:82)
+    at async buildOrThrow (file:///D:/gitlab/tycho-brahe/tycho-components/node_modules/storybook/dist/core-server/index.js:5555:12)
+    at async buildDevStandalone (file:///D:/gitlab/tycho-brahe/tycho-components/node_modules/storybook/dist/core-server/index.js:7208:66)
+    at async withTelemetry (file:///D:/gitlab/tycho-brahe/tycho-components/node_modules/storybook/dist/_node-chunks/chunk-2372JZ52.js:209:12)
+    at async dev (file:///D:/gitlab/tycho-brahe/tycho-components/node_modules/storybook/dist/bin/core.js:2734:3)
+    at async _Command.<anonymous> (file:///D:/gitlab/tycho-brahe/tycho-components/node_modules/storybook/dist/bin/core.js:2801:92)
+[18:43:19.504] [WARN] Broken build, fix the error above.
+You may need to refresh the browser.

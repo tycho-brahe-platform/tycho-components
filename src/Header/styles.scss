@@ -1,0 +1,50 @@
+.ds-header {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  background: var(--background-accent);
+  min-width: 960px;
+  min-height: 48px;
+  z-index: 1150;
+  gap: 16px;
+
+  .header-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 16px;
+
+    .app-title {
+      > .title {
+        @include label-large-2;
+        color: var(--text-light-fixed);
+        margin-right: 8px;
+      }
+
+      > .subtitle {
+        @include label-large-1;
+        color: var(--text-light-fixed);
+      }
+    }
+  }
+
+  .header-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: var(--spacing-150);
+    gap: 8px;
+  }
+}

@@ -1,0 +1,52 @@
+.ds-table {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-subtle-2);
+  background-color: var(--background-default);
+
+  .MuiTableContainer-root {
+    height: 100%;
+    flex: 1;
+    overflow: auto;
+  }
+
+  .MuiTableCell-root {
+    height: 46px;
+  }
+
+  .MuiTableRow-root {
+    height: 46px;
+
+    &:hover {
+      background-color: var(--layer-hover-1);
+    }
+
+    .text-center {
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
+  .MuiTableBody-root {
+    &.MuiTableRow-head {
+      .MuiTableCell-head {
+        @include tag-medium-2;
+        color: var(--text-primary);
+        font-family: 'Lora';
+      }
+    }
+
+    .MuiTableCell-body {
+      @include label-medium-1;
+      color: var(--text-primary);
+      font-family: 'Work Sans';
+      cursor: pointer;
+    }
+  }
+
+  &.table-striped tbody tr:nth-of-type(odd) {
+    background-color: var(--layer-hover-1);
+  }
+}

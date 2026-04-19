@@ -1,0 +1,86 @@
+{
+  "name": "tycho-components",
+  "private": false,
+  "version": "0.1.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.js"
+    },
+    "./cytoscape-context-menus": {
+      "types": "./dist/cytoscape-context-menus.d.ts",
+      "import": "./dist/cytoscape-context-menus.js",
+      "require": "./dist/cytoscape-context-menus.js"
+    },
+    "./dist/styles/main": "./dist/styles/main.scss"
+  },
+  "files": [
+    "dist/"
+  ],
+  "dependencies": {
+    "@tanstack/react-table": "^8.20.6",
+    "axios": "^1.13.6",
+    "classnames": "^2.5.1",
+    "cytoscape": "^3.28.1",
+    "cytoscape-node-edge-html-label": "^1.0.6",
+    "file-saver": "^2.0.5",
+    "html2canvas": "^1.4.1",
+    "js-cookie": "^3.0.5",
+    "react-loading": "^2.0.3",
+    "react-simple-keyboard": "^3.8.66",
+    "react-toastify": "^9.1.3",
+    "simple-keyboard-layouts": "^3.4.82"
+  },
+  "peerDependencies": {
+    "@emotion/react": "^11.13.3",
+    "@emotion/styled": "^11.13.0",
+    "@hookform/resolvers": "^5.2.2",
+    "@mui/icons-material": "7.3.0",
+    "@mui/material": "7.3.0",
+    "i18next": "^23.3.0",
+    "i18next-browser-languagedetector": "^7.1.0",
+    "react": ">=17 <19",
+    "react-dom": ">=17 <19",
+    "react-hook-form": "^7.45.2",
+    "react-i18next": "^13.0.2",
+    "react-router-dom": "^6.14.2",
+    "tycho-storybook": "0.6.1",
+    "yup": "^1.2.0"
+  },
+  "devDependencies": {
+    "@storybook/addon-docs": "^10.1.11",
+    "@storybook/addon-onboarding": "^10.1.11",
+    "@storybook/cli": "^10.1.11",
+    "@storybook/react": "^10.1.11",
+    "@storybook/react-vite": "^10.1.11",
+    "@storybook/testing-library": "^0.2.2",
+    "@types/cytoscape": "^3.21.9",
+    "@types/file-saver": "^2.0.5",
+    "@types/js-cookie": "^3.0.6",
+    "@types/react": "^18.2.0",
+    "@types/react-dom": "^18.2.0",
+    "@typescript-eslint/eslint-plugin": "^5.62.0",
+    "@typescript-eslint/parser": "^5.62.0",
+    "@vitejs/plugin-react": "^5.0.0",
+    "eslint": "^8.57.1",
+    "eslint-plugin-react-hooks": "^4.6.2",
+    "eslint-plugin-react-refresh": "^0.4.1",
+    "eslint-plugin-storybook": "^0.11.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass-embedded": "^1.97.2",
+    "storybook": "^10.1.11",
+    "typescript": "^5.7.3",
+    "vite": "^7.0.0"
+  },
+  "scripts": {
+    "start": "storybook dev -p 6006",
+    "build-storybook": "storybook build",
+    "build": "tsc && node scripts/copy-package-json.js && npm run copy-css",
+    "build-publish": "tsc && npm run copy-css",
+    "copy-css": "node scripts/copy-css.js"
+  }
+}
