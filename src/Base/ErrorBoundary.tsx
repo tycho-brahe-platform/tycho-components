@@ -1,6 +1,5 @@
 import { ReactNode, useEffect, useState } from 'react';
 import { useTranslation } from 'react-i18next';
-import { useNavigate } from 'react-router-dom';
 import { Button } from 'tycho-storybook';
 import CookieStorage from '../configs/CookieStorage';
 import logo from '../configs/types/logo.png';
@@ -16,7 +15,6 @@ interface ErrorBoundaryState {
 }
 
 export default function ErrorBoundary({ children }: Props) {
-  const navigate = useNavigate();
   const { t } = useTranslation('base');
   const [state, setState] = useState<ErrorBoundaryState>({
     hasError: false,
@@ -48,7 +46,9 @@ export default function ErrorBoundary({ children }: Props) {
   }, []);
 
   const handleRedirect = () => {
-    navigate('/', { replace: true });
+    // Avoid useNavigate() here: this boundary often wraps the app above <Router>,
+    // so it must not depend on react-router context.
+    window.location.replace('/');
   };
 
   const handleRetry = () => {
