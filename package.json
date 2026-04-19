@@ -1,5 +1,5 @@
 {
-  "name": "tycho-components",
+  "name": "@tycho-platform/components",
   "private": false,
   "version": "0.1.0",
   "main": "dist/index.js",
